@@ -1,0 +1,19 @@
+* TABLE 생성
+CREATE TABLE author(
+    -> id INT(11) NOT NULL AUTO_INCREMENT,
+    -> name varchar(30) NOT NULL,
+    -> profile VARCHAR(200) NULL,
+    -> PRIMARY KEY(id)
+    -> );
+
+* COLUMN 변경
+ALTER TABLE topic ADD COLUMN author_id INT(11);
+
+FORM method="get' action "search.php";
+
+* JOIN 실행
+SELECT * FROM topic LEFT JOIN author ON topic.author_id=author.id;
+
+* sql 실행 중지
+die($sql);
+
